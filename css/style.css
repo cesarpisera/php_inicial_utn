@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+estilos de la pagina principal 
+ */
+
+body {
+    font-family: "Indie Flower", cursive;
+    padding-top: 90px;
+    padding-bottom: 0;
+    position: relative;
+    padding-bottom: 120px;
+    min-height: 100vh;
+}
+
+main section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bienvenidos-container {
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.header {
+    background-color: #4a5759;
+    height: 90px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    line-height: 90px;
+    text-shadow:4px 4px 0 #000;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 2rem;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    line-height: 6rem;
+    text-shadow:4px 4px 0 #000;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link:active {
+    background-color: #b0c4b1;
+    transition: 0.5s;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+/* GRID DE INTEGRANTES */
+
+.integrantes-gatunos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+    minmax(400px,1fr));
+    padding: 20px;
+    grid-gap: 40px;
+}
+
+.integrante {
+    background-color: #b0c4b1;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+
+.container-img {
+    position: relative;
+    clip-path: polygon(0 0,100% 0,100% 85%, 0 100%);
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+}
+
+.footer-bottom {
+    background-color: #4a5759;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    text-shadow:4px 4px 0 #000;
+}
+
+
+
+/* 
+MEDIA QUERY CELULAR
+*/
+@media (max-width: 768px) {
+
+    body {
+    background: white;
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .titulo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+        text-shadow:4px 4px 0 #000;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #4a5759;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100%-60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link:active {
+        background: none;
+        color: black;
+    }
+
+    .nav-toggle {
+        display: block;
+        padding-right: 20px;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+main section {
+    flex-direction: column;
+}
+
+.bienvenidos-container {
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+}
+
+img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+}
+
+}
+
+/*
+estilos de la pagina de integrantes 
+*/
+
+
+
+/* PROYECTO BOTONES 
+.integrantes-botones {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.integrantes-botones li {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+} */
